@@ -10,12 +10,12 @@ public class Task02 {
             return "byte";
         } catch (NumberFormatException e) {
             try {
-                int n=Integer.parseInt(input);
-                return "int";
+                short n=Short.parseShort(input);
+                return "short";
             } catch (NumberFormatException e1) {
                 try {
-                    short n=Short.parseShort(input);
-                    return "short";
+                    int n=Integer.parseInt(input);
+                    return "int";
                 } catch (NumberFormatException e2) {
                     try {
                         long n=Long.parseLong(input);
