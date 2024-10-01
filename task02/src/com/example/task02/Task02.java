@@ -5,8 +5,28 @@ public class Task02 {
     public static String solution(String input) {
 
         // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
+        try {
+            byte n=Byte.parseByte(input);
+            return "byte";
+        } catch (NumberFormatException e) {
+            try {
+                int n=Integer.parseInt(input);
+                return "int";
+            } catch (NumberFormatException e1) {
+                try {
+                    short n=Short.parseShort(input);
+                    return "short";
+                } catch (NumberFormatException e2) {
+                    try {
+                        long n=Long.parseLong(input);
+                        return "long";
+                    } catch (NumberFormatException e3) {
+                      return "";
+                    }
+                }
+            }
+        }
 
-        return "";
     }
 
     public static void main(String[] args) {
